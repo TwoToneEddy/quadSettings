@@ -1,4 +1,4 @@
-
+defaults nosave
 # name
 name TwoToneEddy
 
