@@ -8,8 +8,9 @@ resource MOTOR 2 C06
 resource MOTOR 3 C09
 resource MOTOR 4 C07
 resource SERIAL_TX 4 NONE
+resource SERIAL_RX 3 NONE
 resource CAMERA_CONTROL 1 A00
-
+resource PINIO 1 C11
 
 # feature
 feature -SOFTSERIAL
@@ -35,15 +36,18 @@ mode_color 6 1 6
 # aux
 aux 0 0 0 900 1525 0 0
 aux 1 13 0 1925 1975 0 0
-aux 2 13 0 1825 1875 0 0
-aux 3 13 0 1625 1675 0 0
-aux 4 13 0 1725 1775 0 0
-aux 5 13 0 1425 1475 0 0
-aux 6 13 0 1325 1375 0 0
-aux 7 13 0 1125 1175 0 0
-aux 8 13 0 1225 1275 0 0
-aux 9 35 0 1625 1825 0 0
-aux 10 35 0 1125 1325 0 0
+aux 2 13 0 1625 1675 0 0
+aux 3 13 0 1725 1775 0 0
+aux 4 13 0 1425 1475 0 0
+aux 5 13 0 1325 1375 0 0
+aux 6 13 0 1125 1175 0 0
+aux 7 13 0 1225 1275 0 0
+aux 8 35 0 1625 1825 0 0
+aux 9 35 0 1125 1325 0 0
+aux 10 40 0 1825 1950 0 0
+aux 11 40 0 1325 1425 0 0
+aux 12 40 0 1625 1725 0 0
+aux 13 40 0 1125 1225 0 0
 
 # adjrange
 adjrange 0 0 1 900 2100 29 1 0 0
@@ -120,7 +124,7 @@ set vtx_channel = 8
 set vtx_freq = 5917
 set camera_control_ref_voltage = 325
 set camera_control_key_delay = 125
-
+set pinio_box = 40,41,42,43
 # profile
 profile 0
 
