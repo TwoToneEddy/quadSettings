@@ -1,0 +1,191 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.1.1 Nov 15 2019 / 12:57:05 (1e5e3d369) MSP API: 1.42
+# manufacturer_id: AIKO   board_name: AIKONF7   custom defaults: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name AIKONF7
+manufacturer_id AIKO
+mcu_id 001d003c3338510f39393832
+signature 
+
+# name: TwoToneEddy
+
+# resources
+resource MOTOR 1 C07
+resource MOTOR 2 C06
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature OSD
+
+# map
+map TAER1234
+
+# serial
+serial 2 2048 115200 57600 0 115200
+serial 4 64 115200 57600 0 115200
+
+# aux
+aux 0 0 0 900 1525 0 0
+aux 1 13 0 1925 1975 0 0
+aux 2 13 0 1725 1775 0 0
+aux 3 13 0 1825 1875 0 0
+aux 4 13 0 1625 1675 0 0
+aux 5 35 0 1625 1825 0 0
+aux 6 35 0 1125 1325 0 0
+aux 7 40 0 1825 1950 0 0
+aux 8 40 0 1325 1425 0 0
+aux 9 40 0 1625 1725 0 0
+aux 10 40 0 1125 1225 0 0
+
+# adjrange
+adjrange 0 0 1 900 2100 29 1 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745    0
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 UNKNOWN  U FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860    0
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
+vtxtable powerlevels 2
+vtxtable powervalues 0 23
+vtxtable powerlabels 25 200
+
+# master
+set gyro_lowpass2_hz = 300
+set dyn_notch_range = LOW
+set dyn_notch_width_percent = 0
+set dyn_notch_q = 200
+set dyn_notch_min_hz = 90
+set dyn_lpf_gyro_min_hz = 240
+set dyn_lpf_gyro_max_hz = 600
+set acc_hardware = NONE
+set mag_hardware = NONE
+set baro_hardware = NONE
+set serialrx_provider = CRSF
+set min_throttle = 1000
+set dshot_idle_value = 450
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT600
+set yaw_motors_reversed = ON
+set small_angle = 45
+set pid_process_denom = 1
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
+set osd_cap_alarm = 1300
+set osd_vbat_pos = 6168
+set osd_rssi_pos = 6178
+set osd_tim_1_pos = 54
+set osd_tim_2_pos = 33
+set osd_flymode_pos = 364
+set osd_throttle_pos = 225
+set osd_vtx_channel_pos = 2505
+set osd_crosshairs_pos = 2382
+set osd_ah_pos = 200
+set osd_current_pos = 6646
+set osd_mah_drawn_pos = 6199
+set osd_craft_name_pos = 6633
+set osd_gps_speed_pos = 218
+set osd_gps_lon_pos = 82
+set osd_gps_lat_pos = 65
+set osd_gps_sats_pos = 51
+set osd_home_dir_pos = 302
+set osd_home_dist_pos = 303
+set osd_compass_bar_pos = 266
+set osd_altitude_pos = 12
+set osd_pid_roll_pos = 423
+set osd_pid_pitch_pos = 455
+set osd_pid_yaw_pos = 487
+set osd_debug_pos = 1
+set osd_power_pos = 321
+set osd_pidrate_profile_pos = 345
+set osd_warnings_pos = 2473
+set osd_avg_cell_voltage_pos = 6188
+set osd_pit_ang_pos = 257
+set osd_rol_ang_pos = 289
+set osd_battery_usage_pos = 392
+set osd_disarmed_pos = 138
+set osd_nheading_pos = 311
+set osd_nvario_pos = 279
+set osd_esc_tmp_pos = 82
+set osd_esc_rpm_pos = 83
+set osd_stat_max_spd = OFF
+set osd_stat_endbatt = ON
+set osd_stat_battery = ON
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set vtx_band = 5
+set vtx_channel = 2
+set vtx_power = 1
+set vtx_freq = 5695
+set camera_control_ref_voltage = 325
+set camera_control_key_delay = 125
+set name = TwoToneEddy
+
+profile 0
+
+# profile 0
+set dyn_lpf_dterm_min_hz = 84
+set dyn_lpf_dterm_max_hz = 204
+set dterm_lowpass2_hz = 180
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set roll_srate = 64
+set pitch_srate = 64
+set yaw_srate = 64
+set tpa_rate = 20
+
+rateprofile 1
+
+# rateprofile 1
+set roll_rc_rate = 130
+set pitch_rc_rate = 130
+set yaw_rc_rate = 130
+set roll_srate = 72
+set pitch_srate = 72
+set yaw_srate = 72
+
+rateprofile 2
+
+# rateprofile 2
+set roll_rc_rate = 150
+set pitch_rc_rate = 150
+set yaw_rc_rate = 150
+set roll_srate = 80
+set pitch_srate = 80
+set yaw_srate = 80
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
