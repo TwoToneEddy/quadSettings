@@ -28,6 +28,9 @@ feature -RX_PARALLEL_PWM
 feature RX_SERIAL
 feature OSD
 
+# beacon
+beacon RX_SET
+
 # map
 map TAER1234
 
@@ -80,6 +83,7 @@ set min_throttle = 1000
 set dshot_idle_value = 450
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT600
+set beeper_dshot_beacon_tone = 2
 set yaw_motors_reversed = ON
 set small_angle = 45
 set pid_process_denom = 1
