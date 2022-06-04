@@ -28,7 +28,8 @@ smix 2 2 0 -50 0 -1
 smix 3 2 1 50 0 -1
 
 # servo
-servo 1 1000 2000 1500 -100
+servo 1 1000 2000 1478 -100
+servo 2 1000 2000 1469 100
 
 # safehome
 
@@ -70,10 +71,11 @@ serial 30 2048 115200 115200 0 115200
 aux 0 0 0 1300 2100
 aux 1 1 1 900 1300
 aux 2 12 1 1700 2100
-aux 3 37 2 1300 1700
-aux 4 54 2 1700 2100
-aux 5 47 3 1300 2100
-aux 6 47 0 1300 2100
+aux 3 21 2 1725 2100
+aux 4 37 2 1300 1725
+aux 5 54 1 900 1200
+aux 6 47 3 1300 2100
+aux 7 47 0 1300 2100
 
 # adjrange
 
@@ -102,6 +104,7 @@ osd_layout 0 41 1 14 V
 osd_layout 0 42 1 13 V
 osd_layout 0 105 21 13 V
 osd_layout 0 110 13 2 V
+osd_layout 0 112 23 2 V
 
 # master
 set gyro_main_lpf_hz = 25
@@ -141,7 +144,7 @@ profile 1
 set fw_p_pitch = 15
 set fw_i_pitch = 5
 set fw_d_pitch = 5
-set fw_ff_pitch = 70
+set fw_ff_pitch = 75
 set fw_p_roll = 15
 set fw_i_roll = 3
 set fw_d_roll = 7
@@ -157,10 +160,11 @@ set nav_fw_pos_z_d = 5
 set nav_fw_pos_xy_p = 60
 set d_boost_min =  1.000
 set d_boost_max =  1.000
+set fw_level_pitch_trim =  0.595
 set rc_expo = 30
 set rc_yaw_expo = 30
-set roll_rate = 18
-set pitch_rate = 9
+set roll_rate = 36
+set pitch_rate = 16
 set yaw_rate = 3
 
 # profile
